@@ -1,0 +1,12 @@
+create table ALUNOS(
+    Matricula varchar(9) not null,
+    Nome varchar(100) not null,
+    Email varchar(100) not null,
+    Turma char(1) not null,
+    Serie int not null,
+    Sexo char(1) not null,
+    Telefone varchar(15) not null,
+    Endereco varchar(100) not null,
+    Respnsavel varchar(100) not null,
+    primary key(Matricula)
+);

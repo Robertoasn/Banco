@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de cadastro</title>
+    <link rel="stylesheet" href="/front.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Alunos</h1>
+    </header>
+    <main>
+        <section>
+            <form method="post" action="/alunos/cadastro">
+                <label for="mat">Matricula:</label>
+                <input type="text" id="mat" name="Matricula"><br>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="Nome"><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="Email"><br>
+                <label for="turma">Turma:</label>
+                <input type="text" id="turma" name="Turma"><br>
+                <label for="serie">Serie:</label>
+                <input type="number" id="serie" name="Serie"><br>
+                <label for="sex">Sexo</label>
+                <input type="text" id="sex" name="Sexo"><br>
+                <label for="tel">Telefone:</label>
+                <input type="tel" id="tel" name="Telefone"><br>
+                <label for="end">Endereço:</label>
+                <input type="text" id="end" name="Endereco"><br>
+                <label for="res">Responsavel:</label>
+                <input type="text" id="res" name="Respnsavel"><br>
+                <input type="submit" value="cadastrar" id="botao">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Janeiro 2024</p>
+    </footer>
+</body>
+</html>

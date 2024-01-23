@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de cadastro</title>
+    <link rel="stylesheet" href="/front.css">
+</head>
+<body>
+    <header>
+        <h1>Deletar Cadastro?</h1>
+    </header>
+    <main>
+        <section>
+            <% aluno.forEach(dado=>{ %>
+
+            <form method="post" action="/alunos/deletar/<%= dado.Matricula %>?_method=DELETE">
+                <label for="mat">Matricula:</label>
+                <input type="text" id="mat" name="Matricula" value="<%= dado.Matricula %>"><br>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="Nome" value="<%= dado.Nome %>"><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="Email" value="<%= dado.Email %>"><br>
+                <label for="turma">Turma:</label>
+                <input type="text" id="turma" name="Turma" value="<%= dado.Turma %>"><br>
+                <label for="serie">Serie:</label>
+                <input type="number" id="serie" name="Serie" value="<%= dado.Serie %>"><br>
+                <label for="sex">Sexo</label>
+                <input type="text" id="sex" name="Sexo" value="<%= dado.Sexo %>"><br>
+                <label for="tel">Telefone:</label>
+                <input type="tel" id="tel" name="Telefone" value="<%= dado.Telefone %>"><br>
+                <label for="end">Endereço:</label>
+                <input type="text" id="end" name="Endereco" value="<%= dado.Endereco %>"><br>
+                <label for="res">Responsavel:</label>
+                <input type="text" id="res" name="Respnsavel" value="<%= dado.Respnsavel %>"><br>
+                <input type="submit" value="Apagar" id="botao">
+            </form>
+            <% }) %>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Janeiro 2024</p>
+    </footer>
+</body>
+</html>

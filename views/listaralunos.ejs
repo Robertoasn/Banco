@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de alunos</title>
+    <link rel="stylesheet" href="/front.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Alunos</h1>
+    </header>
+    <main id="mainlista">
+        <section>
+            <h2>Dashboard</h2>
+            <% if(bancoalunos.length>0){ %>
+            <table>
+                <tr>
+                    <th> Matrucula </th>
+                    <th> Nome </th>
+                    <th> Email </th>
+                    <th> Turma </th>
+                    <th> Serie </th>
+                    <th> Sexo </th>
+                    <th> Telefone </th>
+                    <th> Endereço </th>
+                    <th> Responsavel </th>
+                    <th colspan="2">Ações</th>
+                </tr>
+            <% bancoalunos.forEach(aluno => { %>
+                <tr>
+                    <td><%= aluno.Matricula %></td>
+                    <td><%= aluno.Nome %></td>
+                    <td><%= aluno.Email %></td>
+                    <td><%= aluno.Turma %></td>
+                    <td><%= aluno.Serie %></td>
+                    <td><%= aluno.Sexo %></td>
+                    <td><%= aluno.Telefone %></td>
+                    <td><%= aluno.Endereco %></td>
+                    <td><%= aluno.Respnsavel %></td>
+                    <td><a href="/alunos/editaraluno/<%= aluno.Matricula %>">Editar</a></td>
+                    <td><a href="/alunos/deletar/<%= aluno.Matricula %> ?_method=DELETE">Remover</a></td>
+                </tr>
+            <% }); %>
+            </table>
+            <% }else{ %>
+                <p>Nenhum registro cadastrado</p>
+            <% } %>
+        </section>
+    </main>
+    <footer id="folista">
+        <p>&copy; Janeiro 2024</p>
+    </footer>
+</body>
+</html>
